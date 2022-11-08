@@ -22,14 +22,14 @@ public class RepoController {
    }
 
    @PostMapping(value = "getMyRepoInfo", produces = MediaType.APPLICATION_JSON_VALUE)
-   public ResponseEntity<?> getMyRepoInfo() throws JSONException, NoSuchAlgorithmException, KeyStoreException, KeyManagementException {
+   public ResponseEntity<?> getMyRepoInfo() throws JSONException{
       JSONArray repoResp = repoService.getMyRepoDescription();
 
       return new ResponseEntity<>(repoResp.toString(), HttpStatus.OK);
    }
 
    @PostMapping(value = "getUserRepoInfo", produces = MediaType.APPLICATION_JSON_VALUE)
-   public ResponseEntity<?> getUserRepoInfo(@RequestParam(name="user") String username) throws JSONException, NoSuchAlgorithmException, KeyStoreException, KeyManagementException {
+   public ResponseEntity<?> getUserRepoInfo(@RequestParam(name="user") String username) throws JSONException{
       JSONArray repoResp = repoService.getUserRepoDescription(username);
 
       return new ResponseEntity<>(repoResp.toString(), HttpStatus.OK);
