@@ -95,7 +95,7 @@ The REST API to the example app is described below.
 
 ### request
 
-'POST /getMyRepoInfo/'
+'POST /getUserRepoInfo/'
 
     curl -i -H 'Accept: application/json' http://localhost:8080/getMyRepoInfo?user=slewdziu99
 
